@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@100;700&family=Hanken+Grotesk:wght@500;700;800&family=Montserrat:wght@100;200;500;700&display=swap');
+
+
+:root{
+    --mainTheme : rgb(17, 37, 212);
+    --mainTextColor: white;
+    --reactionColor: 255, 87, 87;
+    --memoryColor: 255, 176, 31;
+    --verbalColor: 0, 189, 145;
+    --visualColor: 17, 37, 212;
+
+    --scoreColor: hsl(224, 30%, 27%);
+    --maxScoreColor: hsl(242, 18%, 62%);
+    --TitleColor: hsl(241, 100%, 89%);
+
+
+    --headerGradient1: hsl(252, 100%, 67%);
+    --headerGradient2 :hsl(241, 81%, 54%);
+    --circleGradient1: hsla(256, 72%, 46%, 1);
+    --circleGradient2: hsla(241, 72%, 46%, 0);
+    --alpha: 0.08;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Hanken Grotesk', 'Courier New', Courier, monospace;
+    font-size: 16px;
+}
+body{
+    min-height: 100%;
+    min-width: 100%;
+    display: flex;
+    flex-direction: column;    
+}
+#flexContainer{
+    display: flex;
+    flex-direction: column;    
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(var(--headerGradient1), var(--headerGradient2));
+    color: var(--mainTextColor);
+    border-radius: 0 0 30px 30px;
+    min-height: 40vh;
+}
+
+h1, span, button, footer {
+    text-align: center;
+    margin-bottom: 3vh;
+    color: var(--TitleColor);
+}
+h1{
+    margin-top: 3vh;
+}
+h2{
+    font-weight: 500;
+    margin: 2vh 0 1vh 13vw;
+    text-align: left;
+    font-size: 1.2rem;
+}
+#circle {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: end;
+    width: 120px;
+    height: 120px;
+    background: linear-gradient(var(--circleGradient1), var(--circleGradient2));
+    border-radius: 50%;
+    margin: 0px auto 3vh auto;    
+}
+#circle p{
+    color: var(--mainTextColor);
+    font-weight: 800;
+    font-size: 3rem;
+}
+#circle span  {    
+    color: var(--maxScoreColor); 
+}
+.comment{
+    text-align: center;
+    color:  var(--TitleColor);
+    padding-bottom: 3vh;
+}
+.grade {
+    text-align: center;
+    font-size: 1.5rem;
+}
+.score{
+    color: var(--scoreColor);
+    font-weight: 700;
+}
+span{
+    color: var(--maxScoreColor);
+    font-weight: 700;
+}
+.grade{
+    font-weight: 700;
+    margin: 0 0 10px ;
+    letter-spacing: 0.05rem;
+}
+.comment{
+    margin: 0 15% 0 15%;
+}
+.reaction, .memory, .verbal, .visual{
+    display: flex;
+    justify-content:space-between;
+    margin: 10px 13vw 5px 13vw;
+    border-radius: 10px;
+    padding: 15px;    
+    font-weight: 700;
+}
+.score{
+    justify-content: right;
+ }
+.summary{
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: 0 0 0 0;
+}
+img{
+    margin-right: 15px;
+}
+.categories{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+}
+.reaction{
+    background-color: rgb(var(--reactionColor), var(--alpha));
+    color: rgb(var(--reactionColor));
+    /* background-color: aquamarine; */
+}
+.memory{
+    background-color: rgb(var(--memoryColor), var(--alpha));
+    color: rgb(var(--memoryColor));
+}
+.verbal{
+    background-color: rgb(var(--verbalColor), var(--alpha));
+    color: rgb(var(--verbalColor));
+}
+.visual{
+    background-color: rgb(var(--visualColor), var(--alpha));
+    color: rgb(var(--visualColor));
+}
+.container{
+    display: flex;
+    text-align: center;
+}
+button{
+    margin: 20px 13vw 20px 13vw;
+    padding: 15px;
+    border-radius: 25px;
+    width: 100%;
+    background-color: var(--scoreColor);
+    color: var(--mainTextColor);
+    font-weight: 700;
+}
+button:hover {
+    background: linear-gradient(var(--headerGradient1), var(--headerGradient2));
+    color: white;
+  }
+  footer{
+    margin-top: auto;
+  }
+
+@media screen and (min-width: 768px){
+    #flexContainer{
+        flex-direction: row;
+        margin:23vh 10vh 10vh 10vh;
+        background-color: white;
+    }
+    .reaction, .memory, .verbal, .visual{
+        margin: 10px 3vw 5px 3vw;
+    }
+    header{
+        border-radius: 30px 30px 30px 30px;
+        min-width: 40vw;
+        /* min-height: 40vh; */
+    }
+    .summary{
+        background-color: white;
+        box-shadow: 10px 5px 30px var(--TitleColor);
+        min-width: 40vw;
+    }
+    button{
+        margin: 20px 3vw 20px 3vw;
+        padding: 15px 0 15px;
+    }
+    footer{
+        margin-top: auto;
+    }
+    #circle {
+        width: 200px;
+        height: 200px;  
+        justify-content: center;
+    }
+    #circle p{
+        font-size: 4rem;
+    }
+
+}
+   
+ 
+
+  
+
+
+
